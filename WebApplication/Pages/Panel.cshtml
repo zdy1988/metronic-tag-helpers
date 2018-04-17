@@ -1,0 +1,32 @@
+﻿@page
+@model PanelModel
+@using Zdy.Metronic.TagHelpers
+@{
+    var panels = Enum.GetValues(typeof(Theme));
+}
+
+<portlet title="Panels" is-fit="true">
+
+    @foreach (var panel in panels)
+    {
+        var panelState = (Theme)panel;
+
+        if (panelState != Theme.None)
+        {
+
+            <panel theme="@panelState" title="@panelState.ToString() Panel">
+                Panel content
+            </panel>
+
+        }
+    }
+
+    <panel>
+        Panel content
+
+        <panel-footer>
+            Panel footer
+        </panel-footer>
+    </panel>
+
+</portlet>

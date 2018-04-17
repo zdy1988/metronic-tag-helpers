@@ -1,0 +1,101 @@
+﻿@page
+@model WebApplication.Pages.IconModel
+@using Zdy.Metronic.TagHelpers
+
+@{
+    var icons = Enum.GetValues(typeof(Icon));
+}
+
+<portlet title="Icons" is-fit="true">
+    <div class="clearfix">
+        <note>
+            <p>
+                Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. The complete set of 439 icons
+                in Font Awesome 4.1.0
+            </p> For more info check out:
+            <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/">http://fortawesome.github.io/Font-Awesome/icons/</a>
+        </note>
+
+        @foreach (var icon in icons)
+        {
+            var iconName = (Icon)icon;
+
+            if (iconName != Icon.None)
+            {
+
+                <div class="fa-item col-md-3 col-sm-4">
+
+                    <icon name="@(Icon)icon"></icon> @icon
+
+                </div>
+
+            }
+        }
+    </div>
+    <div class="clearfix">
+        <h4 class="block">Sizes</h4>
+        <icon name="Camera"></icon>
+        <icon name="Camera" size="Lg"></icon>
+        <icon name="Camera" size="_2x"></icon>
+        <icon name="Camera" size="_3x"></icon>
+        <icon name="Camera" size="_4x"></icon>
+        <icon name="Camera" size="_5x"></icon>
+    </div>
+    <div class="clearfix">
+        <h4 class="block">Fiexd Width</h4>
+        <icon name="Home" is-fixed-width="true"></icon> Home <br />
+        <icon name="Book" is-fixed-width="true"></icon> Book <br />
+        <icon name="Pencil" is-fixed-width="true"></icon> Pencil <br />
+        <icon name="Cog" is-fixed-width="true"></icon> Cog
+    </div>
+    <div class="clearfix">
+        <h4 class="block">Border And Pull</h4>
+        <div class="col-md-3 col-sm-4">
+            <p>
+                <icon name="QuoteLeft" size="_3x" class-names="pull-left" is-bordered="true"></icon>
+                ...tomorrow we will run faster, stretch out our arms farther...
+                And then one fine morning— So we beat on, boats against the
+                current, borne back ceaselessly into the past.
+            </p>
+        </div>
+    </div>
+    <div class="clearfix">
+        <h4 class="block">Animated</h4>
+        <br />
+        <icon name="Spinner" size="_2x" is-spin="true"></icon>
+        <icon name="CircleONotch" size="_2x" is-spin="true"></icon>
+        <icon name="Refresh" size="_2x" is-spin="true"></icon>
+        <icon name="Cog" size="_2x" is-spin="true"></icon>
+        <icon name="Spinner" size="_2x" is-spin="true" is-pulse="true"></icon>
+    </div>
+    <div class="clearfix">
+        <h4 class="block">Rotated And Flipped</h4>
+        <br />
+        <icon name="Shield" size="_2x"></icon>
+        <icon name="Shield" rotate="_90" size="_2x"></icon>
+        <icon name="Shield" rotate="_180" size="_2x"></icon>
+        <icon name="Shield" rotate="_270" size="_2x"></icon>
+        <icon name="Shield" filp="Horizontal" size="_2x"></icon>
+        <icon name="Shield" filp="Vertical" size="_2x"></icon>
+    </div>
+    <div class="clearfix">
+        <h4 class="block">Stacked</h4>
+        <br />
+        <icon-stack>
+            <icon name="Twitter"></icon>
+            <icon name="SquareO"></icon>
+        </icon-stack>
+        <icon-stack>
+            <icon name="Flag" color="White"></icon>
+            <icon name="Circle"></icon>
+        </icon-stack>
+        <icon-stack>
+            <icon name="Terminal" color="White"></icon>
+            <icon name="Square"></icon>
+        </icon-stack>
+        <icon-stack>
+            <icon name="Camera"></icon>
+            <icon name="Ban" color="Red"></icon>
+        </icon-stack>
+    </div>
+</portlet>

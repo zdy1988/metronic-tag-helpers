@@ -1,0 +1,115 @@
+﻿@page
+@model AccordionModel
+@using Zdy.Metronic.TagHelpers
+@{
+    var themes = Enum.GetValues(typeof(Theme));
+    var icons = Enum.GetValues(typeof(Icon));
+}
+
+<portlet title="Accordions" is-fit="true">
+
+    <h4>Default Accordion</h4>
+    <br />
+    <accordion>
+
+        @for (var i = 1; i < 5; i++)
+        {
+            <accordion-panel title="Collapsible Group Item #@i">
+                <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                    nesciunt laborum eiusmod.
+                </p>
+            </accordion-panel>
+        }
+
+    </accordion>
+
+    <h4>Color Theme</h4>
+    <br />
+    <accordion>
+
+        @for (var i = 0; i < themes.Length; i++)
+        {
+            var theme = themes.GetValue(i);
+
+            var accordionTheme = (Theme)theme;
+
+            if (accordionTheme != Theme.None)
+            {
+
+                <accordion-panel title="Collapsible Group Item #@i" theme="@accordionTheme">
+                    <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+                    <p>
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                        nesciunt laborum eiusmod.
+                    </p>
+                </accordion-panel>
+
+            }
+        }
+
+    </accordion>
+
+    <h4>Icon</h4>
+    <br />
+    <accordion>
+        @for (var i = 1; i < 5; i++)
+        {
+            <accordion-panel title="Collapsible Group Item #@i" icon="@(Icon)icons.GetValue(i + 50)">
+                <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                    nesciunt laborum eiusmod.
+                </p>
+            </accordion-panel>
+        }
+    </accordion>
+
+    <h4>Scrollable</h4>
+    <br />
+    <accordion is-scrollable="true">
+        @for (var i = 1; i < 5; i++)
+        {
+            <accordion-panel title="Collapsible Group Item #@i" icon="@(Icon)icons.GetValue(i + 50)">
+                <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                    nesciunt laborum eiusmod.
+                </p>
+            </accordion-panel>
+        }
+    </accordion>
+
+    <h4>Accordion Toggle Styled</h4>
+    <br />
+    <accordion is-show-accordion-toggle-styled="true">
+        @for (var i = 1; i < 5; i++)
+        {
+            <accordion-panel title="Collapsible Group Item #@i" icon="@(Icon)icons.GetValue(i + 50)">
+                <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                    nesciunt laborum eiusmod.
+                </p>
+            </accordion-panel>
+        }
+    </accordion>
+
+    <h4>Accordion Active Index</h4>
+    <br />
+    <accordion is-show-accordion-toggle-styled="true" active-index="1">
+        @for (var i = 1; i < 5; i++)
+        {
+            <accordion-panel title="Collapsible Group Item #@i" icon="@(Icon)icons.GetValue(i + 50)">
+                <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                    nesciunt laborum eiusmod.
+                </p>
+            </accordion-panel>
+        }
+    </accordion>
+
+</portlet>
+

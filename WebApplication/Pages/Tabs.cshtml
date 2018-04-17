@@ -1,0 +1,212 @@
+﻿@page
+@model WebApplication.Pages.TabsModel
+@using Zdy.Metronic.TagHelpers.Tabs
+@{
+    var modes = Enum.GetValues(typeof(TabsMode));
+
+    var positions = Enum.GetValues(typeof(Position));
+}
+
+<portlet title="Tabs" is-fit="true">
+
+    @foreach (var mode in modes)
+    {
+        var tabMode = (TabsMode)mode;
+
+        <h4>@tabMode Tab</h4>
+        <br />
+        <tabs mode="@tabMode">
+            <tab-content tab-name="Section 1">
+                <p> I'm in Section 1. </p>
+                <p>
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                    velit esse molestie consequat.
+                </p>
+            </tab-content>
+            <tab-content tab-name="Section 2">
+                <p> I'm in Section 2. </p>
+                <p>
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                    velit esse molestie consequat.
+                </p>
+            </tab-content>
+            <tab-content tab-name="Section 3">
+                <p> I'm in Section 3. </p>
+                <p>
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                    velit esse molestie consequat.
+                </p>
+            </tab-content>
+        </tabs>
+    }
+
+    @foreach (var position in positions)
+    {
+        var tabPosition = (Position)position;
+
+        <h4>@tabPosition Tab</h4>
+        <br />
+        <tabs position="@tabPosition">
+            <tab-content tab-name="Section 1">
+                <p> I'm in Section 1. </p>
+                <p>
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                    velit esse molestie consequat.
+                </p>
+            </tab-content>
+            <tab-content tab-name="Section 2">
+                <p> I'm in Section 2. </p>
+                <p>
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                    velit esse molestie consequat.
+                </p>
+            </tab-content>
+            <tab-content tab-name="Section 3">
+                <p> I'm in Section 3. </p>
+                <p>
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                    velit esse molestie consequat.
+                </p>
+            </tab-content>
+        </tabs>
+    }
+
+    <h4>Justified Tab</h4>
+    <br />
+    <tabs mode="Custom" is-justified="true">
+        <tab-content tab-name="Section 1">
+            <p> I'm in Section 1. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 2">
+            <p> I'm in Section 2. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 3">
+            <p> I'm in Section 3. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+    </tabs>
+
+    <h4>Reversed Tab</h4>
+    <br />
+    <tabs mode="Custom" is-reversed="true">
+        <tab-content tab-name="Section 1">
+            <p> I'm in Section 1. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 2">
+            <p> I'm in Section 2. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 3">
+            <p> I'm in Section 3. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+    </tabs>
+
+    <h4>Active Index</h4>
+    <br />
+    <tabs mode="Custom" active-index="1">
+        <tab-content tab-name="Section 1">
+            <p> I'm in Section 1. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 2">
+            <p> I'm in Section 2. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 3">
+            <p> I'm in Section 3. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+    </tabs>
+
+    <h4>Limit Tab</h4>
+    <br />
+    <tabs mode="Custom" limit="2">
+        <tab-content tab-name="Section 1">
+            <p> I'm in Section 1. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 2">
+            <p> I'm in Section 2. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 3">
+            <p> I'm in Section 3. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 4">
+            <p> I'm in Section 4. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+        <tab-content tab-name="Section 5">
+            <p> I'm in Section 5. </p>
+            <p>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                velit esse molestie consequat.
+            </p>
+        </tab-content>
+    </tabs>
+
+</portlet>

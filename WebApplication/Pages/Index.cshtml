@@ -1,0 +1,372 @@
+﻿@page
+@model IndexModel
+
+<div class="row">
+    <div class="col-md-12">
+        <portlet title="客戶列表" is-form="true" is-fit="true">
+            <form action="#" id="form_sample_2">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-md-line-input">
+                                <input type="text" class="form-control" name="name" id="form_control_1" placeholder="Enter your name">
+                                <label for="form_control_1">
+                                    Name
+                                    <span class="required">*</span>
+                                </label>
+                                <span class="help-block">Enter your name...</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-md-line-input">
+                                <input type="text" class="form-control" id="form_control_1" name="email" placeholder="Enter your email">
+                                <label for="form_control_1">
+                                    Email
+                                    <span class="required">*</span>
+                                </label>
+                                <span class="help-block">Please enter your email...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <input type="text" class="form-control" id="form_control_1" name="url" placeholder="Enter URL">
+                        <label for="form_control_1">URL</label>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <input type="text" class="form-control" id="form_control_1" name="number" placeholder="Enter number">
+                        <label for="form_control_1">Number</label>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <input type="text" class="form-control" name="digits" placeholder="Enter digits">
+                            <label for="form_control_1">Digits</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="email2" placeholder="Enter your email">
+                            <label for="form_control_1">Email</label>
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <div class="input-group">
+                            <div class="input-group-control">
+                                <input type="text" class="form-control" name="number2" placeholder="Placeholder">
+                                <label for="form_control_1">Enter your number</label>
+                            </div>
+                            <div class="input-group-btn btn-right">
+                                <button type="button" class="btn green-haze dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    Action
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li>
+                                        <a href="javascript:;">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">Something else here</a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <select class="form-control" name="delivery">
+                            <option value="">Select</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label for="form_control_1">Warning State</label>
+                        <span class="help-block">Some help goes here...</span>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <textarea class="form-control" name="memo" rows="3"></textarea>
+                        <label for="form_control_1">Memo</label>
+                        <span class="help-block">Some help goes here...</span>
+                    </div>
+                    <div class="form-group form-md-checkboxes">
+                        <label for="form_control_1">Checkboxes</label>
+                        <div class="md-checkbox-list">
+                            <div class="md-checkbox">
+                                <input type="checkbox" id="checkbox2_1" name="checkboxes1[]" value="1" class="md-check">
+                                <label for="checkbox2_1">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 1
+                                </label>
+                            </div>
+                            <div class="md-checkbox">
+                                <input type="checkbox" id="checkbox2_2" name="checkboxes1[]" value="1" class="md-check">
+                                <label for="checkbox2_2">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 2
+                                </label>
+                            </div>
+                            <div class="md-checkbox">
+                                <input type="checkbox" id="checkbox2_3" name="checkboxes1[]" value="1" class="md-check">
+                                <label for="checkbox2_3">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-checkboxes">
+                        <label for="form_control_1">Checkboxes</label>
+                        <div class="md-checkbox-inline">
+                            <div class="md-checkbox">
+                                <input type="checkbox" id="checkbox2_4" name="checkboxes2[]" value="1" class="md-check">
+                                <label for="checkbox2_4">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 1
+                                </label>
+                            </div>
+                            <div class="md-checkbox">
+                                <input type="checkbox" id="checkbox2_5" name="checkboxes2[]" value="1" class="md-check">
+                                <label for="checkbox2_5">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 2
+                                </label>
+                            </div>
+                            <div class="md-checkbox">
+                                <input type="checkbox" id="checkbox2_6" name="checkboxes2[]" value="1" class="md-check">
+                                <label for="checkbox2_6">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-radios">
+                        <label for="form_control_1">Radios</label>
+                        <div class="md-radio-list">
+                            <div class="md-radio">
+                                <input type="radio" id="checkbox112_6" name="radio1" value="1" class="md-radiobtn">
+                                <label for="checkbox112_6">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 1
+                                </label>
+                            </div>
+                            <div class="md-radio">
+                                <input type="radio" id="checkbox112_7" name="radio1" value="2" class="md-radiobtn">
+                                <label for="checkbox112_7">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 2
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-radios">
+                        <label for="form_control_1">Radios</label>
+                        <div class="md-radio-inline">
+                            <div class="md-radio">
+                                <input type="radio" id="checkbox2_8" name="radio2" value="121" class="md-radiobtn">
+                                <label for="checkbox2_8">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 1
+                                </label>
+                            </div>
+                            <div class="md-radio">
+                                <input type="radio" id="checkbox2_9" name="radio2" value="112" class="md-radiobtn">
+                                <label for="checkbox2_9">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 2
+                                </label>
+                            </div>
+                            <div class="md-radio">
+                                <input type="radio" id="checkbox2_10" name="radio2" value="112" class="md-radiobtn">
+                                <label for="checkbox2_10">
+                                    <span></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn green">Validate</button>
+                            <button type="reset" class="btn default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </portlet>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="~/assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <script type="text/javascript">
+        var FormValidationMd = function () {
+            var handleValidation2 = function () {
+                // for more info visit the official plugin documentation:
+                // http://docs.jquery.com/Plugins/Validation
+                var form1 = $('#form_sample_2');
+                var error1 = $('.alert-danger', form1);
+                var success1 = $('.alert-success', form1);
+
+                form1.validate({
+                    errorElement: 'span', //default input error message container
+                    errorClass: 'help-block help-block-error', // default input error message class
+                    focusInvalid: false, // do not focus the last invalid input
+                    ignore: "", // validate all fields including form hidden input
+                    messages: {
+                        payment: {
+                            maxlength: jQuery.validator.format("Max {0} items allowed for selection"),
+                            minlength: jQuery.validator.format("At least {0} items must be selected")
+                        },
+                        'checkboxes1[]': {
+                            required: 'Please check some options',
+                            minlength: jQuery.validator.format("At least {0} items must be selected"),
+                        },
+                        'checkboxes2[]': {
+                            required: 'Please check some options',
+                            minlength: jQuery.validator.format("At least {0} items must be selected"),
+                        }
+                    },
+                    rules: {
+                        name: {
+                            minlength: 2,
+                            required: true
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        email2: {
+                            required: true,
+                            email: true
+                        },
+                        url: {
+                            required: true,
+                            url: true
+                        },
+                        url2: {
+                            required: true,
+                            url: true
+                        },
+                        number: {
+                            required: true,
+                            number: true
+                        },
+                        number2: {
+                            required: true,
+                            number: true
+                        },
+                        digits: {
+                            required: true,
+                            digits: true
+                        },
+                        creditcard: {
+                            required: true,
+                            creditcard: true
+                        },
+                        delivery: {
+                            required: true
+                        },
+                        payment: {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 4
+                        },
+                        memo: {
+                            required: true,
+                            minlength: 10,
+                            maxlength: 40
+                        },
+                        'checkboxes1[]': {
+                            required: true,
+                            minlength: 2,
+                        },
+                        'checkboxes2[]': {
+                            required: true,
+                            minlength: 3,
+                        },
+                        radio1: {
+                            required: true
+                        },
+                        radio2: {
+                            required: true
+                        }
+                    },
+
+                    invalidHandler: function (event, validator) { //display error alert on form submit
+                        success1.hide();
+                        error1.show();
+                        App.scrollTo(error1, -200);
+                    },
+
+                    errorPlacement: function (error, element) {
+                        if (element.is(':checkbox')) {
+                            error.insertAfter(element.closest(".md-checkbox-list, .md-checkbox-inline, .checkbox-list, .checkbox-inline"));
+                        } else if (element.is(':radio')) {
+                            error.insertAfter(element.closest(".md-radio-list, .md-radio-inline, .radio-list,.radio-inline"));
+                        } else {
+                            error.insertAfter(element); // for other inputs, just perform default behavior
+                        }
+                    },
+
+                    highlight: function (element) { // hightlight error inputs
+                        $(element)
+                            .closest('.form-group').addClass('has-error'); // set error class to the control group
+                    },
+
+                    unhighlight: function (element) { // revert the change done by hightlight
+                        $(element)
+                            .closest('.form-group').removeClass('has-error'); // set error class to the control group
+                    },
+
+                    success: function (label) {
+                        label
+                            .closest('.form-group').removeClass('has-error'); // set success class to the control group
+                    },
+
+                    submitHandler: function (form) {
+                        success1.show();
+                        error1.hide();
+                    }
+                });
+            }
+
+            return {
+                //main function to initiate the module
+                init: function () {
+                    handleValidation2();
+                }
+            };
+        }();
+
+        jQuery(document).ready(function () {
+            FormValidationMd.init();
+        });
+    </script>
+}

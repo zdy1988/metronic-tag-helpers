@@ -1,0 +1,43 @@
+﻿@page
+@model NoteModel
+@using Zdy.Metronic.TagHelpers
+@{
+    var notes = Enum.GetValues(typeof(State));
+}
+
+<portlet title="Notes" is-fit="true">
+
+    <h4 class="block">States</h4>
+
+    @foreach (var note in notes)
+    {
+        var noteState = (State)note;
+
+        if (noteState != State.None)
+        {
+
+            <note state="@noteState" title="@noteState.ToString() ! Some Header Goes Here">
+                <p>Duis mollis, est non commodo luctus, nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+            </note>
+
+        }
+    }
+
+    <h4 class="block">Colors</h4>
+
+    <note color="Red" state="None">
+        <p>Duis mollis, est non commodo luctus, nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+    </note>
+    <note color="Blue">
+        <p>Duis mollis, est non commodo luctus, nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+    </note>
+    <note color="Yellow">
+        <p>Duis mollis, est non commodo luctus, nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+    </note>
+    <note color="Dark" state="None">
+        <p>Duis mollis, est non commodo luctus, nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+    </note>
+
+</portlet>
+
+

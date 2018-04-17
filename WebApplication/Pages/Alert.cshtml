@@ -1,0 +1,57 @@
+﻿@page
+@model AlertModel
+@using Zdy.Metronic.TagHelpers
+@{
+    var alerts = Enum.GetValues(typeof(State));
+}
+
+<portlet title="Alerts" is-fit="true">
+
+    <h4 class="block">States</h4>
+
+    @foreach (var alert in alerts)
+    {
+        var alertState = (State)alert;
+
+        if (alertState != State.None)
+        {
+
+            <alert state="@alertState">
+                <strong>@alertState.ToString()!</strong> The page has been added.
+            </alert>
+
+        }
+    }
+
+    <h4 class="block">Colors</h4>
+
+    <alert color="Red">
+        The page has been added.
+    </alert>
+    <alert color="Blue">
+        The page has been added.
+    </alert>
+    <alert color="Yellow">
+        The page has been added.
+    </alert>
+    <alert color="Dark">
+        The page has been added.
+    </alert>
+
+    <h4 class="block">Dismissable</h4>
+
+    @foreach (var alert in alerts)
+    {
+        var alertState = (State)alert;
+
+        if (alertState != State.None)
+        {
+
+            <alert state="@alertState" can-closed="true">
+                <strong>@alertState.ToString()!</strong> The page has been added.
+            </alert>
+
+        }
+    }
+
+</portlet>

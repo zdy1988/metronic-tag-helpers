@@ -1,0 +1,85 @@
+﻿@page
+@model WebApplication.Pages.ListModel
+@using Zdy.Metronic.TagHelpers
+@{
+    var states = Enum.GetValues(typeof(State));
+}
+
+<portlet title="Panels" is-fit="true">
+
+    <h4 class="block">Basic</h4>
+    <list>
+        <list-item>
+            Cras justo odio
+        </list-item>
+        <list-item>
+            Dapibus ac facilisis in
+        </list-item>
+        <list-item>
+            Morbi leo risus
+        </list-item>
+        <list-item>
+            Porta ac consectetur ac
+        </list-item>
+        <list-item>
+            Vestibulum at eros
+        </list-item>
+    </list>
+
+    <h4 class="block">Custom Colors</h4>
+    <list>
+        <list-item color="Red">
+            Cras justo odio
+        </list-item>
+        <list-item color="Blue">
+            Dapibus ac facilisis in
+        </list-item>
+        <list-item color="Dark">
+            Morbi leo risus
+        </list-item>
+        <list-item color="Green">
+            Porta ac consectetur ac
+        </list-item>
+        <list-item color="Yellow">
+            Vestibulum at eros
+        </list-item>
+    </list>
+
+    <h4 class="block">Contextual States</h4>
+    <list>
+        @foreach (var state in states)
+        {
+            var itemState = (State)state;
+
+            <list-item state="@itemState">
+                @itemState
+            </list-item>
+        }
+    </list>
+
+    <h4 class="block">Disabled States</h4>
+    <list>
+        @foreach (var state in states)
+        {
+            var itemState = (State)state;
+
+            <list-item state="@itemState" is-disabled="true">
+                @itemState
+            </list-item>
+        }
+    </list>
+
+    <h4 class="block">Custom Content</h4>
+    <list>
+        @foreach (var state in states)
+        {
+            var itemState = (State)state;
+
+            <list-item state="@itemState">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text"> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit. </p>
+            </list-item>
+        }
+    </list>
+
+</portlet>

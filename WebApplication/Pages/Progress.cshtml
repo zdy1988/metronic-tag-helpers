@@ -1,0 +1,62 @@
+﻿@page
+@model WebApplication.Pages.ProgressModel
+@using Zdy.Metronic.TagHelpers
+@{
+    var states = Enum.GetValues(typeof(State));
+
+    Random random = new Random();
+}
+
+<portlet title="Progresses" is-fit="true">
+    <note state="Warning" title="Cross-browser compatibility">
+        <p>
+            Progress bars use CSS3 transitions and animations to achieve some of their effects. These features are not supported in Internet Explorer 9 and below or older versions of Firefox. Opera 12 does
+            not support animations.
+        </p>
+    </note>
+
+    <h4 class="block">Basic</h4>
+
+    @foreach (var state in states)
+    {
+        var progressState = (State)state;
+
+        <progress-bar state="@progressState" value="@random.Next(1, 100)"></progress-bar>
+    }
+
+    <h4 class="block">Striped</h4>
+
+    @foreach (var state in states)
+    {
+        var progressState = (State)state;
+
+        <progress-bar state="@progressState" value="@random.Next(1, 100)" striped="Static"></progress-bar>
+    }
+
+    <h4 class="block">Animated</h4>
+
+    @foreach (var state in states)
+    {
+        var progressState = (State)state;
+
+        <progress-bar state="@progressState" value="@random.Next(1, 100)" striped="Active"></progress-bar>
+    }
+
+    <h4 class="block">Show Value && Title</h4>
+
+    @foreach (var state in states)
+    {
+        var progressState = (State)state;
+
+        <progress-bar state="@progressState" value="@random.Next(1, 100)" striped="Active" is-show-value="true" title="@progressState"></progress-bar>
+    }
+
+    @{
+        var value = random.Next(20, 80);
+    }
+
+    <h4 class="block">Min && Max && Step</h4>
+    <p>min: <label>20</label> max: <label>80</label> value: <label>@value</label></p>
+    <progress-bar state="Success" min="20" max="80" value="@value" striped="Active" is-show-value="true"></progress-bar>
+
+</portlet>
